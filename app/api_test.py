@@ -49,4 +49,4 @@ class TestClass:
 
 
 if __name__=="__main__":
-    pytest.main(args=[__file__])
+    pytest.main(args=[__file__, '--html=report.html'])
