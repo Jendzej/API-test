@@ -1,6 +1,6 @@
 import json
-from urllib import response
 import requests
+import pytest
 
 test_data = {
     "first_name":"Test",
@@ -46,3 +46,7 @@ class TestClass:
     def test_deleting_user_data(self):
         data_delete = requests.delete(f"http://localhost:8000/api/v1/users/1/{user_id[-1]}")
         assert data_delete.status_code==200
+
+
+if __name__=="__main__":
+    pytest.main(args=[__file__])
